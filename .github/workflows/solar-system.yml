@@ -56,9 +56,10 @@ jobs:
     dev-deploy:
       needs: docker
       runs-on: ubuntu-latest
-      environment: development
+      environment:
+        name: development
       steps:
-        - uses: action/checkout@v4
+        - uses: actions/checkout@v4
         - name: Setup Kubectl
           uses: azure/setup-kubectl@v4
           with:
