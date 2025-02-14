@@ -52,7 +52,9 @@ jobs:
           name: Code-Coverage-Result
           path: coverage
           retention-days: 5
+
     dev-deploy:
+      needs: docker
       runs-on: ubuntu-latest
       environment: development
       steps:
